@@ -19,11 +19,12 @@ function keepGoing(array, changeValue, skipValue){
 }
 
 function findBy(array, findFn){
-  var bool = null
+  exist = null
   for(var i = 0; i < array.length; i++){
-    if(findFn.arguments[0] == array[i]){
-      bool = array[i]
+    if(findFn(array[i])){
+      exist = array[i]
     }
   }
-  return bool
+  return exist
 }
+
